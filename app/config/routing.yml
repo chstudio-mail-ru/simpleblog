@@ -1,3 +1,4 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+a2x_blog:
+    resource: "@A2xBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
