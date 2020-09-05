@@ -2,6 +2,7 @@
 
 namespace A2x\BlogBundle\Controller;
 
+use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -67,7 +68,7 @@ class PostController extends Controller
      *
      * @param Post $entity The entity
      *
-     * @return \Symfony\Component\Form\Form The form
+     * @return Form The form
      */
     private function createCreateForm(Post $entity)
     {
@@ -156,7 +157,7 @@ class PostController extends Controller
     *
     * @param Post $entity The entity
     *
-    * @return \Symfony\Component\Form\Form The form
+    * @return Form The form
     */
     private function createEditForm(Post $entity)
     {
@@ -233,7 +234,7 @@ class PostController extends Controller
      *
      * @param mixed $id The entity id
      *
-     * @return \Symfony\Component\Form\Form The form
+     * @return Form The form
      */
     private function createDeleteForm($id)
     {

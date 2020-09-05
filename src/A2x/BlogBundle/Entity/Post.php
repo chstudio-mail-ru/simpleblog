@@ -1,7 +1,9 @@
 <?php
 namespace A2x\BlogBundle\Entity;
 
+use \DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Exception;
 
 /**
  * @ORM\Entity(repositoryClass="PostRepository")
@@ -157,14 +159,13 @@ class Post
     /**
      * Set created
      *
-     * @param \DateTime $created
      * @return Post
+     * @throws Exception
      * @ORM\PrePersist
-     * @throws \Exception
      */
     public function setCreated()
     {
-        $this->created = new \DateTime('now');
+        $this->created = new DateTime('now');
 
         return $this;
     }
@@ -172,7 +173,7 @@ class Post
     /**
      * Get created
      *
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreated()
     {
@@ -182,14 +183,13 @@ class Post
     /**
      * Set updated
      *
-     * @param \DateTime $updated
      * @return Post
+     * @throws Exception
      * @ORM\PreUpdate()
-     * @throws \Exception
      */
     public function setUpdated()
     {
-        $this->updated = new \DateTime('now');
+        $this->updated = new DateTime('now');
 
         return $this;
     }
@@ -197,7 +197,7 @@ class Post
     /**
      * Get updated
      *
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdated()
     {
